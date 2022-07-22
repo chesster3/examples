@@ -10,8 +10,6 @@ n = 22, алгоритм генерирует следующую последо�
 минимум для целых чисел в пределах 1 000 000.
 """
 
-import unittest as ut
-
 def is_even(n):
     return (n & 1) == 0
 
@@ -26,13 +24,6 @@ def algo(n):
         num = calculate(num)
         res.append(num)
     return res
-
-# Checking result
-class TestResult(ut.TestCase):
-    def test_result(self):
-        right_answer = [22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1]
-        my_answer = algo(22)
-        self.assertEqual(my_answer, right_answer)
 
 def check_result(res):
     right_answer = [22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1]
