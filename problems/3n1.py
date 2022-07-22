@@ -18,7 +18,7 @@ def calculate(n):
     return n >> 1 if is_even(n) else (n*3) + 1
 
 # return a list with sequance of nums
-def algo(n):
+def generate_seq_from(n):
     num, res = n, [n]
     while num > 1:
         num = calculate(num)
@@ -31,5 +31,5 @@ def check_result(res):
 
 
 if __name__ == "__main__":
-    is_right = check_result(algo(22))
+    is_right = check_result(generate_seq_from(22))
     print("Right answer" if is_right else "It's wrong :(")
